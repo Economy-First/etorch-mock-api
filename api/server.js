@@ -11,7 +11,8 @@ const middlewares = jsonServer.defaults()
 server.use(middlewares)
 server.use(jsonServer.bodyParser)
 
-// 1. 출처(Origin) 관련 API
+// 2.1. 출처(Origin) 관련 API
+// 모든 출처 목록 조회
 server.get('/api/v1/origins', (req, res) => {
   const origins = router.db.get('origins').value()
   res.jsonp({
@@ -20,7 +21,8 @@ server.get('/api/v1/origins', (req, res) => {
   })
 })
 
-// 2.1 특정 출처의 모든 지표 목록 조회
+// 2.2 지표 정보 API
+// 특정 출처의 모든 지표 목록 조회
 server.get('/api/v1/origins/:origin/indicators', (req, res) => {
   const origin = req.params.origin
   const frequency = req.query.frequency
@@ -49,7 +51,7 @@ server.get('/api/v1/origins/:origin/indicators', (req, res) => {
   })
 })
 
-// 2.2 특정 출처의 특정 지표 상세 정보 조회
+// 특정 출처의 특정 지표 상세 정보 조회
 server.get('/api/v1/origins/:origin/indicators/:code', (req, res) => {
   const { origin, code } = req.params
   const indicator = router.db.get('indicators')
@@ -88,7 +90,7 @@ server.get('/api/v1/origins/:origin/indicators/:code', (req, res) => {
   })
 })
 
-// 2.3 모든 출처의 모든 지표 목록 조회
+// 모든 출처의 모든 지표 목록 조회
 server.get('/api/v1/indicators', (req, res) => {
   const frequency = req.query.frequency
   let indicators = router.db.get('indicators').value()
@@ -106,7 +108,7 @@ server.get('/api/v1/indicators', (req, res) => {
   })
 })
 
-// 2.4 특정 코드의 모든 출처 지표 조회
+// 특정 코드의 모든 출처 지표 조회
 server.get('/api/v1/indicators/:code', (req, res) => {
   const code = req.params.code
   const indicators = router.db.get('indicators')
@@ -129,7 +131,7 @@ server.get('/api/v1/indicators/:code', (req, res) => {
   })
 })
 
-// 3.1 데이터 조회주기 목록 조회
+// 데이터 조회주기별 지표 목록 조회
 server.get('/api/v1/frequencies', (req, res) => {
   const frequencies = router.db.get('frequencies').value()
 
@@ -139,10 +141,11 @@ server.get('/api/v1/frequencies', (req, res) => {
   })
 })
 
-// 3.2 특정 출처의 특정 지표 데이터 조회
+// 2.3 지표 데이터 API
+// 특정 출처의 특정 지표 데이터 조회
 server.get('/api/v1/origins/:origin/data/:code', (req, res) => {
   const { origin, code } = req.params
-  const { frequency, startDae, endDate } = req.query
+  const { frequency, from, to } = req.query
 
   // 지표 확인
   const indicator = router.db.get('indicators')
@@ -172,14 +175,12 @@ server.get('/api/v1/origins/:origin/data/:code', (req, res) => {
 
   // 데이터 생성
   try {
-    const from = startDae || '2020-01-01'
-    const to = endDate || new Date().toISOString().split('T')[0]
     const usedFrequency = frequency || indicator.frequencies[0]
 
     const timeSeries = generateMockData({
       frequency: usedFrequency,
-      from,
-      to
+      from: from || '2020-01-01',
+      to: to || new Date().toISOString().split('T')[0]
     })
 
     res.jsonp({
@@ -190,7 +191,7 @@ server.get('/api/v1/origins/:origin/data/:code', (req, res) => {
         name: indicator.name,
         unit: indicator.unit,
         frequency: usedFrequency,
-        time_series: timeSeries
+        timeSeries
       }
     })
   } catch (error) {
@@ -204,9 +205,9 @@ server.get('/api/v1/origins/:origin/data/:code', (req, res) => {
   }
 })
 
-// 3.3 다중 지표 데이터 조회
+// 다중 지표 데이터 조회 (출처와 코드 조합)
 server.get('/api/v1/data', (req, res) => {
-  const { indicators, frequency, startDate, endDate } = req.query
+  const { indicators, frequency, from, to } = req.query
 
   if (!indicators) {
     return res.status(400).jsonp({
@@ -262,13 +263,10 @@ server.get('/api/v1/data', (req, res) => {
     }
 
     try {
-      const from = startDate || '2020-01-01'
-      const to = endDate || new Date().toISOString().split('T')[0]
-
       const timeSeries = generateMockData({
         frequency: usedFrequency,
-        from,
-        to
+        from: from || '2020-01-01',
+        to: to || new Date().toISOString().split('T')[0]
       })
 
       result.push({
@@ -277,7 +275,7 @@ server.get('/api/v1/data', (req, res) => {
         name: indicator.name,
         unit: indicator.unit,
         frequency: usedFrequency,
-        time_series: timeSeries
+        timeSeries
       })
     } catch (error) {
       return res.status(400).jsonp({

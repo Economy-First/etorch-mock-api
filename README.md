@@ -211,7 +211,7 @@ GET /api/v1/origins/{origin}/data/{code}
     "name": "Composite Coincident Index",
     "unit": "2020=100",
     "frequency": "M",
-    "time_series": [
+    "timeSeries": [
       { "date": "2023-01", "value": 98.6 },
       { "date": "2023-02", "value": 98.8 },
       { "date": "2023-03", "value": 99.1 }
@@ -247,7 +247,7 @@ GET /api/v1/data?indicators=kosis:CCI,oecd:CLI_OECD,ecos:BOND_YIELD_1YR&frequenc
       "name": "Composite Coincident Index",
       "unit": "2020=100",
       "frequency": "M",
-      "time_series": [
+      "timeSeries": [
         { "date": "2023-01", "value": 98.6 },
         { "date": "2023-02", "value": 98.8 }
       ]
@@ -258,7 +258,7 @@ GET /api/v1/data?indicators=kosis:CCI,oecd:CLI_OECD,ecos:BOND_YIELD_1YR&frequenc
       "name": "Composite leading indicators",
       "unit": "2020=100",
       "frequency": "M",
-      "time_series": [
+      "timeSeries": [
         { "date": "2023-01", "value": 99.97 },
         { "date": "2023-02", "value": 100.13 }
       ]
@@ -269,7 +269,7 @@ GET /api/v1/data?indicators=kosis:CCI,oecd:CLI_OECD,ecos:BOND_YIELD_1YR&frequenc
       "name": "Government Bond 1Y Rate",
       "unit": "Annual Percentage Rate (APR)",
       "frequency": "M",
-      "time_series": [
+      "timeSeries": [
         { "date": "2023-01", "value": 3.42 },
         { "date": "2023-02", "value": 3.38 }
       ]
@@ -278,9 +278,9 @@ GET /api/v1/data?indicators=kosis:CCI,oecd:CLI_OECD,ecos:BOND_YIELD_1YR&frequenc
 }
 ```
 
-### 2.4 주파수 관련 API
+### 2.4 데이터 조회주기 관련 API **미구현**
 
-#### 주파수 목록 조회
+#### 데이터 조회주기 목록 조회
 ```
 GET /api/v1/frequencies
 ```
@@ -310,7 +310,7 @@ GET /api/v1/frequencies
 }
 ```
 
-### 2.5 관리자용 API
+### 2.5 관리자용 API **미구현**
 
 #### 데이터 업데이트 요청
 ```
