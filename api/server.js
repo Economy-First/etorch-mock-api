@@ -142,7 +142,7 @@ server.get('/api/v1/frequencies', (req, res) => {
 // 3.2 특정 출처의 특정 지표 데이터 조회
 server.get('/api/v1/origins/:origin/data/:code', (req, res) => {
   const { origin, code } = req.params
-  const { frequency, start_date: startDae, end_date: endDate } = req.query
+  const { frequency, startDae, endDate } = req.query
 
   // 지표 확인
   const indicator = router.db.get('indicators')
@@ -206,7 +206,7 @@ server.get('/api/v1/origins/:origin/data/:code', (req, res) => {
 
 // 3.3 다중 지표 데이터 조회
 server.get('/api/v1/data', (req, res) => {
-  const { indicators, frequency, start_date: startDate, end_date: endDate } = req.query
+  const { indicators, frequency, startDate, endDate } = req.query
 
   if (!indicators) {
     return res.status(400).jsonp({
