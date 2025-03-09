@@ -1,201 +1,236 @@
 {
-    "kosis": [
-        {
-            "origin": "kosis",
-            "name": "동행지수 순환변동치",
-            "description": "통계청에서 발표하는 동행지수 순환변동치입니다.",
-            "unit_ko": "2020=100",
-            "unit_en": "2020=100",
-            "code": "CCI",
-            "hasMonth": true,
-            "hasQuarter": false,
-            "hasYear": false,
-            "hasDay": false
-        },
-        {
-            "origin": "kosis",
-            "name": "선행지수 순환변동치",
-            "description": "통계청에서 발표하는 선행지수 순환변동치입니다.",
-            "unit_ko": "2020=100",
-            "unit_en": "2020=100",
-            "code": "CLI",
-            "hasMonth": true,
-            "hasQuarter": false,
-            "hasYear": false,
-            "hasDay": false
-        },
-        {
-            "origin": "kosis",
-            "name": "선행종합지수",
-            "description": "통계청에서 발표하는 선행종합지수로, 경제의 선행 신호를 제공하는 지표입니다.",
-            "unit_ko": "지수",
-            "unit_en": "Index",
-            "code": "LCI",
-            "hasMonth": true,
-            "hasQuarter": false,
-            "hasYear": false,
-            "hasDay": false
-        },
-        {
-            "origin": "kosis",
-            "name": "코스피 지수",
-            "description": "대표적인 한국의 주가지수로, 주식 시장의 종합적인 움직임을 나타내는 지표입니다.",
-            "unit_ko": "지수",
-            "unit_en": "Index",
-            "code": "KOSPI",
-            "hasMonth": true,
-            "hasQuarter": false,
-            "hasYear": false,
-            "hasDay": false
-        },
-        {
-            "origin": "kosis",
-            "name": "월별 소비자 물가 등락률 전년동월비(%)",
-            "description": "현재 월의 소비자물가지수와 전년 동월의 지수 값을 비교하여, 소비자물가의 연간 변동률을 나타내는 지표입니다.",
-            "unit_ko": "전년동월비 (%)",
-            "unit_en": "YoY (%)",
-            "code": "CPI_CR_YoY",
-            "hasMonth": true,
-            "hasQuarter": false,
-            "hasYear": false,
-            "hasDay": false
-        },
-        {
-            "origin": "kosis",
-            "name": "코스피 시가총액",
-            "description": "한국 주식 시장에서 상장된 기업들의 시가 총액을 나타내는 지표입니다.",
-            "unit_ko": "천원",
-            "unit_en": "Thousand Won",
-            "code": "KOSPI_MARKET_CAP",
-            "hasMonth": true,
-            "hasQuarter": false,
-            "hasYear": false,
-            "hasDay": false
-        },
-        {
-            "origin": "kosis",
-            "name": "경제성장률(GDP)(실질, 계절조정, 전기비)",
-            "description": "실질 GDP의 계절 조정된 분기별 성장률",
-            "unit_ko": "전기비 (%)",
-            "unit_en": "QoQ (%)",
-            "code": "RGDP_QoQ_SA",
-            "hasMonth": false,
-            "hasQuarter": true,
-            "hasYear": false,
-            "hasDay": false
-        },
-        {
-            "origin": "kosis",
-            "name": "경제성장률(GDP)(실질, 원계열, 전년동기비)",
-            "description": "실질 GDP의 원계열 전년 대비 분기별 성장률",
-            "unit_ko": "전년동기비 (%)",
-            "unit_en": "YoY (%)",
-            "code": "RGDP_YoY_V",
-            "hasMonth": false,
-            "hasQuarter": true,
-            "hasYear": false,
-            "hasDay": false
-        },
-        {
-            "origin": "kosis",
-            "name": "GDP 디플레이터 등락률(원계열, 전년동기비)",
-            "description": "GDP 디플레이터의 원계열 전년 대비 등락률",
-            "unit_ko": "전년동기비 (%)",
-            "unit_en": "YoY (%)",
-            "code": "GDPD_CR_YoY_V",
-            "hasMonth": false,
-            "hasQuarter": true,
-            "hasYear": false,
-            "hasDay": false
-        },
-        {
-            "origin": "kosis",
-            "name": "국내총생산(GDP)(명목, 원화표시)(십억원)",
-            "description": "국내 총생산의 명목 가치로, 원화로 표시됩니다.",
-            "unit_ko": "십억원",
-            "unit_en": "Bil.Won",
-            "code": "NGDP_KRW",
-            "hasMonth": false,
-            "hasQuarter": false,
-            "hasYear": true,
-            "hasDay": false
-        },
-        {
-            "origin": "kosis",
-            "name": "국내총생산(GDP)(명목, 달러표시)(억달러)",
-            "description": "국내 총생산의 명목 가치로, 미국 달러로 표시됩니다.",
-            "unit_ko": "억달러",
-            "unit_en": "Hund.M U$",
-            "code": "NGDP_USD",
-            "hasMonth": false,
-            "hasQuarter": false,
-            "hasYear": true,
-            "hasDay": false
-        },
-        {
-            "origin": "kosis",
-            "name": "경제성장률(실질성장률)(%)",
-            "description": "국내 총생산의 실질 성장률을 나타내는 지표",
-            "unit_ko": "%",
-            "unit_en": "%",
-            "code": "GDP_RGR",
-            "hasMonth": false,
-            "hasQuarter": false,
-            "hasYear": true,
-            "hasDay": false
-        },
-        {
-            "origin": "kosis",
-            "name": "GDP 디플레이터(2015=100)",
-            "description": "2015년을 기준으로 하는 GDP의 물가지수",
-            "unit_ko": "2015=100",
-            "unit_en": "2015=100",
-            "code": "GDPD_B2015",
-            "hasMonth": false,
-            "hasQuarter": false,
-            "hasYear": true,
-            "hasDay": false
-        },
-        {
-            "origin": "kosis",
-            "name": "GDP 디플레이터(2015=100) 등락률(%)",
-            "description": "GDP 디플레이터의 등락률 (%)",
-            "unit_ko": "등락률 (%)",
-            "unit_en": "등락률 (%)",
-            "code": "GDPD_B2015_CR",
-            "hasMonth": false,
-            "hasQuarter": false,
-            "hasYear": true,
-            "hasDay": false
-        }
-    ],
-    "ecos": [
-        {
-            "origin": "ecos",
-            "name": "시장금리 국고채 (1년)",
-            "description": "Govt. Bonds 1Y Rate",
-            "unit_ko": "연%",
-            "unit_en": "Annual Percentage Rate (APR)",
-            "code": "Govt. Bonds 1Y Rate",
-            "hasMonth": true,
-            "hasQuarter": true,
-            "hasYear": true,
-            "hasDay": true
-        }
-    ],
-    "oecd": [
-        {
-            "origin": "oecd",
-            "name": "선행지수 순환변동치 (OECD)",
-            "description": "OECD에서 발표하는 선행지수 순환변동치입니다.",
-            "unit_ko": "2020=100",
-            "unit_en": "2020=100",
-            "code": "CLI_OECD",
-            "hasMonth": true,
-            "hasQuarter": false,
-            "hasYear": false,
-            "hasDay": false
-        }
-    ]
-
+  "origins": [
+    {
+      "code": "kosis",
+      "name": "Statistics Korea"
+    },
+    {
+      "code": "ecos",
+      "name": "Bank of Korea"
+    },
+    {
+      "code": "oecd",
+      "name": "OECD"
+    }
+  ],
+  "frequencies": [
+    {
+      "code": "D",
+      "name": "Daily"
+    },
+    {
+      "code": "M",
+      "name": "Monthly"
+    },
+    {
+      "code": "Q",
+      "name": "Quarterly"
+    },
+    {
+      "code": "A",
+      "name": "Annual"
+    }
+  ],
+  "indicators": [
+    {
+      "code": "CLI_OECD",
+      "origin": "oecd",
+      "name": "Composite leading indicators",
+      "description": "Leading Indicator for Cyclical Fluctuations published by OECD.",
+      "unit": "2020=100",
+      "frequencies": ["M"]
+    },
+    {
+      "code": "CCI",
+      "origin": "kosis",
+      "name": "Composite Coincident Index",
+      "description": "Composite Coincident Index published by Statistics Korea.",
+      "unit": "2020=100",
+      "frequencies": ["M"]
+    },
+    {
+      "code": "CLI",
+      "origin": "kosis",
+      "name": "Composite Leading Index",
+      "description": "Leading Indicator for Cyclical Fluctuations published by Statistics Korea.",
+      "unit": "2020=100",
+      "frequencies": ["M"]
+    },
+    {
+      "code": "LCI",
+      "origin": "kosis",
+      "name": "Composite Leading Index",
+      "description": "Composite Leading Index published by Statistics Korea, providing signals for the leading direction of the economy.",
+      "unit": "Index",
+      "frequencies": ["M"]
+    },
+    {
+      "code": "KOSPI",
+      "origin": "kosis",
+      "name": "Korea Composite Stock Price Index",
+      "description": "Representative index of the Korean stock market, indicating the overall movement of the stock market.",
+      "unit": "Index",
+      "frequencies": ["M", "D"]
+    },
+    {
+      "code": "CPI_CR_YoY",
+      "origin": "kosis",
+      "name": "CPI Change (YoY)",
+      "description": "Indicator comparing the Consumer Price Index of the current month with that of the same month in the previous year, representing the annual inflation rate of consumer prices.",
+      "unit": "YoY (%)",
+      "frequencies": ["M"]
+    },
+    {
+      "code": "KOSPI_MARKET_CAP",
+      "origin": "kosis",
+      "name": "KOSPI Market Cap",
+      "description": "Indicator representing the total market capitalization of companies listed on the Korean stock market.",
+      "unit": "Thousand Won",
+      "frequencies": ["M"]
+    },
+    {
+      "code": "RGDP_QoQ_SA",
+      "origin": "kosis",
+      "name": "GDP growth rate (real, seasonally adjusted, QoQ)",
+      "description": "Seasonally adjusted quarterly growth rate of real GDP.",
+      "unit": "QoQ (%)",
+      "frequencies": ["Q"]
+    },
+    {
+      "code": "RGDP_YoY_V",
+      "origin": "kosis",
+      "name": "GDP growth rate (real, YoY)",
+      "description": "Year-on-year growth rate of real GDP in nominal terms.",
+      "unit": "YoY (%)",
+      "frequencies": ["Q"]
+    },
+    {
+      "code": "GDPD_CR_YoY_V",
+      "origin": "kosis",
+      "name": "Increase rate of GDP deflator",
+      "description": "Increase rate of GDP deflator based on the year-on-year change in the GDP deflator.",
+      "unit": "YoY (%)",
+      "frequencies": ["Q"]
+    },
+    {
+      "code": "NGDP_KRW",
+      "origin": "kosis",
+      "name": "Gross domestic product (current prices, won)",
+      "description": "Nominal value of Gross Domestic Product (GDP) expressed in Korean Won.",
+      "unit": "Bil.Won",
+      "frequencies": ["A"]
+    },
+    {
+      "code": "NGDP_USD",
+      "origin": "kosis",
+      "name": "Gross domestic product (current prices, dollar)",
+      "description": "Nominal value of Gross Domestic Product (GDP) expressed in US dollars.",
+      "unit": "Hund.M U$",
+      "frequencies": ["A"]
+    },
+    {
+      "code": "GDP_RGR",
+      "origin": "kosis",
+      "name": "GDP growth rate",
+      "description": "Indicator representing the real growth rate of Gross Domestic Product (GDP) in the domestic economy.",
+      "unit": "%",
+      "frequencies": ["A"]
+    },
+    {
+      "code": "GDP_RGR",
+      "origin": "ecos",
+      "name": "GDP growth rate",
+      "description": "Indicator representing the real growth rate of Gross Domestic Product (GDP) in the domestic economy.",
+      "unit": "%",
+      "frequencies": ["A"]
+    },
+    {
+      "code": "RGDP_QoQ_SA",
+      "origin": "ecos",
+      "name": "GDP growth rate (real, seasonally adjusted, QoQ)",
+      "description": "Seasonally adjusted quarterly growth rate of real GDP.",
+      "unit": "QoQ (%)",
+      "frequencies": ["Q"]
+    },
+    {
+      "code": "GDPD_B2015",
+      "origin": "ecos",
+      "name": "GDP Deflator",
+      "description": "GDP deflator based on the year 2015 as the reference year.",
+      "unit": "2015=100",
+      "frequencies": ["A", "Q"]
+    },
+    {
+      "code": "GDPD_B2015_CR",
+      "origin": "ecos",
+      "name": "Increase rate of GDP deflator",
+      "description": "Increase rate of the GDP deflator expressed as a percentage change.",
+      "unit": "%",
+      "frequencies": ["A"]
+    },
+    {
+      "code": "GDPD_CR_YoY_V",
+      "origin": "ecos",
+      "name": "Increase rate of GDP deflator (YoY)",
+      "description": "Increase rate of GDP deflator based on the year-on-year change in the GDP deflator.",
+      "unit": "YoY (%)",
+      "frequencies": ["Q"]
+    },
+    {
+      "code": "NGDP_SA",
+      "origin": "ecos",
+      "name": "Gross domestic product at market prices (seasonally adjusted, nominal)",
+      "description": "Gross domestic product (GDP) at market prices, adjusted for seasonality and unspecified factors, in nominal terms.",
+      "unit": "Bil.Won",
+      "frequencies": ["Q"]
+    },
+    {
+      "code": "RGDP_SA",
+      "origin": "ecos",
+      "name": "Gross domestic product at market prices (seasonally adjusted, real)",
+      "description": "Gross domestic product (GDP) at market prices, adjusted for seasonality, in real terms.",
+      "unit": "Bil.Won",
+      "frequencies": ["Q"]
+    },
+    {
+      "code": "Bond_Yield_1yr",
+      "origin": "ecos",
+      "name": "Govt. Bonds 1Y Rate",
+      "description": "Daily yield of government bonds with a maturity of 1 year.",
+      "unit": "Annual Percentage Rate (APR)",
+      "frequencies": ["D", "M"]
+    },
+    {
+      "code": "Bond_Yield_3yr",
+      "origin": "ecos",
+      "name": "Govt. Bonds 3Y Rate",
+      "description": "Daily yield of government bonds with a maturity of 3 years.",
+      "unit": "Annual Percentage Rate (APR)",
+      "frequencies": ["D", "M"]
+    },
+    {
+      "code": "Bond_Yield_10yr",
+      "origin": "ecos",
+      "name": "Govt. Bonds 10Y Rate",
+      "description": "Daily yield of government bonds with a maturity of 10 years.",
+      "unit": "Annual Percentage Rate (APR)",
+      "frequencies": ["D", "M"]
+    },
+    {
+      "code": "C_Bond_Yield_AA_",
+      "origin": "ecos",
+      "name": "Corp. Bonds 3Y Rate (AA-)",
+      "description": "Monthly yield of AA- rated corporate bonds with a maturity of 3 years.",
+      "unit": "Annual Percentage Rate (APR)",
+      "frequencies": ["M"]
+    },
+    {
+      "code": "BOK_RATE",
+      "origin": "ecos",
+      "name": "BOK Policy Rate",
+      "description": "Benchmark interest rate set by the Bank of Korea.",
+      "unit": "Annual Percentage Rate (APR)",
+      "frequencies": ["D", "M"]
+    }
+  ]
 }
